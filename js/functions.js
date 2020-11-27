@@ -3,11 +3,9 @@ $(document).ready(function(){
 
 	$('#Cep').mask('00000-000');
 
-	
 
 
-
-	/*2. Exemplo de utilização da função $.get */
+	/*1. Exemplo de utilização da função $.get */
 	$("#frmGet").submit(function(){
 	
 		msg="";
@@ -122,6 +120,9 @@ $(document).ready(function(){
 	//Fim do exemplo 2 - $.post
 
 
+
+
+
 	/*
 	3.Exemplo de utilização da função $.getJSON para acessar o web service disponibilizado pelo site
 	https://viacep.com.br
@@ -150,6 +151,8 @@ $(document).ready(function(){
 
 
 
+
+
 	//INÍCIO DO EXEMPLO 4 - $getScript
 	$.getScript( "https://code.jquery.com/color/jquery.color.js", function() {
 	  $( "#iniciar" ).click(function() {
@@ -168,6 +171,8 @@ $(document).ready(function(){
 	  });
 	});
 	//FIM DO EXEMPLO 4 - $getScript
+
+
 
 
 
@@ -228,8 +233,6 @@ $(document).ready(function(){
 		return false;
 		
     });
-
-
 
 	//FIM DO EXEMPLO 5 - $.ajax
 
@@ -307,46 +310,6 @@ $(document).ready(function(){
 
 
 
-function validaCpf() {
-    
-    var exp = /\.|\-/g;
-    
-    var cpf = $('#Cpf').val().replace(exp,'').toString();
-    
-    if(cpf.length == 11 ){
-    
-	    var v = [];
-
-	    //Calcula o primeiro dígito de verificação.
-	    v[0] = 1 * cpf[0] + 2 * cpf[1] + 3 * cpf[2];
-	    v[0] += 4 * cpf[3] + 5 * cpf[4] + 6 * cpf[5];
-	    v[0] += 7 * cpf[6] + 8 * cpf[7] + 9 * cpf[8];
-	    v[0] = v[0] % 11;
-	    v[0] = v[0] % 10;
-
-	    //Calcula o segundo dígito de verificação.
-	    v[1] = 1 * cpf[1] + 2 * cpf[2] + 3 * cpf[3];
-	    v[1] += 4 * cpf[4] + 5 * cpf[5] + 6 * cpf[6];
-	    v[1] += 7 * cpf[7] + 8 * cpf[8] + 9 * v[0];
-	    v[1] = v[1] % 11;
-	    v[1] = v[1] % 10;
-	            
-	    if ((v[0] != cpf[9]) || (v[1] != cpf[10])) {
-	    	return false;	    	
-		}else if (cpf[0] == cpf[1] && cpf[1] == cpf[2] && cpf[2] == cpf[3] && cpf[3] == cpf[4] && cpf[4] == cpf[5] && cpf[5] == cpf[6] && cpf[6] == cpf[7] && cpf[7] == cpf[8] && cpf[8] == cpf[9] && cpf[9] == cpf[10])
-	    {
-	    	return false;	    	
-	    }else{
-	    	return true;	    	
-		}       
-        
-    
-    }else {
-    	return false;    	
-    } 
-}
-
-
 function validaEmail(email){
 
 	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -355,52 +318,3 @@ function validaEmail(email){
 	}
 	return true;
 }
-
-
-//Celular
-function validaCelular(value) {
-    value = value.replace("(","");
-    value = value.replace(")", "");
-    value = value.replace("-", "");
-    value = value.replace(" ", "").trim();
-    if (value == '0000000000') {
-        return false;
-    } else if (value == '00000000000') {
-        return false;
-    } 
-    if (["00", "01", "02", "03", , "04", , "05", , "06", , "07", , "08", "09", "10"].indexOf(value.substring(0, 2)) != -1) {
-        return false;
-    }
-    if (value.length < 10 || value.length > 11) {
-        return false;
-    }
-    if (["6", "7", "8", "9"].indexOf(value.substring(2, 3)) == -1) {
-        return false;
-    }
-
-    return true;
-} 
-
-//Telefone fixo
-function validaTelefone(value) {
-        value = value.replace("(", "");
-        value = value.replace(")", "");
-        value = value.replace("-", "");
-        value = value.replace(" ", "").trim();
-        if (value == '0000000000') {
-            return false;
-        } else if (value == '00000000000') {
-            return false;
-        }
-        if (["00", "01", "02", "03", , "04", , "05", , "06", , "07", , "08", "09", "10"].indexOf(value.substring(0, 2)) != -1) {
-            return false;
-        }
-        if (value.length < 10 || value.length > 11) {
-            return false;
-        }
-        if (["1", "2", "3", "4","5"].indexOf(value.substring(2, 3)) == -1) {
-            return false;
-        }
-
-        return true;
-} 
