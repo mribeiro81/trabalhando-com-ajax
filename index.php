@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
@@ -56,11 +57,10 @@
                     <input type="text" class="form-control requiredGet" name="email" id="email" title="E-mail" placeholder="E-mail" value="">
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg mt-4 enviar">Enviar</button>
+                <button type="submit" class="btn btn-dark btn-lg mt-4 mb-4 enviar">Enviar</button>
             </form>
 
-            <button class="btn btn-secondary abrir-get">Ver a síntaxe da função $.get</button>
-            <button class="btn btn-secondary fechar-get">Fechar a síntaxe da função $.get</button>
+            <button class="btn btn-info abrir-get">Síntaxe da função $.get</button>
 
 <pre class="display-none mt-4 sintaxe-get">
 $.get(
@@ -160,11 +160,10 @@ $(document).ready(function(){
                     <input type="text" class="form-control requiredPost" name="email" id="email2" title="E-mail" placeholder="E-mail" value="">
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg mt-4 enviar">Enviar</button>
+                <button type="submit" class="btn btn-dark btn-lg mt-4 mb-4 enviar">Enviar</button>
             </form>
             
-            <button class="btn btn-secondary abrir-post">Ver a síntaxe da função $.post</button>
-            <button class="btn btn-secondary fechar-post">Fechar a síntaxe da função $.post</button>  
+            <button class="btn btn-info abrir-post">Síntaxe da função $.post</button>  
 
 <pre class="display-none mt-4 sintaxe-post">
 $.post(
@@ -310,8 +309,7 @@ $(document).ready(function(){
                 
             </form>
 
-            <button class="btn btn-secondary abrir-get-json mt-5">Ver a síntaxe $.getJSON</button>
-            <button class="btn btn-secondary fechar-get-json mt-5">Fechar a síntaxe $.getJSON</button>
+            <button class="btn btn-info abrir-get-json mt-5">Síntaxe $.getJSON</button>
 
 <pre class="display-none mt-4 sintaxe-get-json">
 $.getJSON(
@@ -338,13 +336,7 @@ Observação: Essa função também admite que os parâmetros sejam passados na 
         <div class="alert alert-info">
             Veja abaixo o código JQuery utilizado para acessar o web service do site <a href="https://viacep.com.br" target="_blank">https://viacep.com.br</a>, que recebe um cep como parâmetro e retorna o endereço correspondente.
         </div>
-        <div id="msg-viacep2" class="alert alert-warning alert-dismissible" role="alert">
-          *A utilização do web service fornecido pelo site <a href="https://viacep.com.br" target="_blank">https://viacep.com.br</a> nesse exemplo não configura recomendação para utilizá-lo em sistemas.<br />
-          **Caso precise de web service de cep, recomendo que compre um banco de dados de cep dos correios e crie o seu próprio web service, assim, você terá certeza de que a sua base de cep está completa.   
-          <button type="button" class="close close2" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+        
 <pre>
 $(document).ready(function(){
 
@@ -388,11 +380,10 @@ $(document).ready(function(){
             </div>
                
 
-           <button id="iniciar" class="btn btn-primary"> Clique para testar</button>
+           <button id="iniciar" class="btn btn-dark btn-lg mt-4 mb-4"> Clique para testar</button>
            <div class="dark-magenta" style=" "></div>
 
-           <button class="btn btn-secondary abrir-get-script mt-4">Ver a síntaxe $.getScript</button>
-           <button class="btn btn-secondary fechar-get-script mt-4">Fechar a síntaxe $.getScript</button>
+           <button class="btn btn-info abrir-get-script mt-4">Síntaxe $.getScript</button>
 
 <pre class="display-none mt-4 sintaxe-get-script">
 $.getScript(
@@ -485,11 +476,10 @@ $(document).ready(function(){
                     <input type="text" class="form-control requiredPostAjax" name="email" id="email3" title="E-mail" placeholder="E-mail" value="">
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg mt-4 enviar">Enviar</button>
+                <button type="submit" class="btn btn-dark btn-lg mt-4 mb-4 enviar">Enviar</button>
             </form>
 
-            <button class="btn btn-secondary abrir-post-ajax">Ver a síntaxe da função $.ajax</button>
-            <button class="btn btn-secondary fechar-post-ajax">Fechar a síntaxe da função $.ajax</button>
+            <button class="btn btn-info abrir-post-ajax">Síntaxe da função $.ajax</button>
 
 <pre class="display-none mt-4 sintaxe-post-ajax">
 $.ajax({
