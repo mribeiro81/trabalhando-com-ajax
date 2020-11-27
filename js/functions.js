@@ -162,11 +162,11 @@ $(document).ready(function(){
 	      }, 1000 )
 	      .delay( 500 )
 	      .animate({
-	        backgroundColor: "#FFA500"
+	        backgroundColor: "#8B0000"
 	      }, 1000 )
 	      .delay( 500 )
 	      .animate({
-	        backgroundColor: "#FFD700"
+	        backgroundColor: "#DC143C"
 	      }, 1000 );
 	  });
 	});
@@ -181,8 +181,7 @@ $(document).ready(function(){
 	
 		msg="";
 		$(".requiredPostAjax").each(function() {
-			if ($(this).val() == "") {
-				alert($(this).attr('id'));
+			if ($(this).val() == "") {				
 				msg += " - " + $(this).attr("title") + "<br>";
 			}
 
@@ -263,48 +262,26 @@ $(document).ready(function(){
 
 
 
-	$(".abrir-get").click(function(){
-		$(".sintaxe-get").fadeIn("fast");			
-	});
-	$(".fechar-get").click(function(){
-		$(".sintaxe-get").fadeOut("slow");			
-	});
+	$('.abrir-get').click(function(){
+        $('.sintaxe-get').fadeToggle('slow');
+    });
 
+    $('.abrir-post').click(function(){
+        $('.sintaxe-post').fadeToggle('slow');
+    });
 
-	$(".abrir-post").click(function(){
-		$(".sintaxe-post").fadeIn("fast");			
-	});
-	$(".fechar-post").click(function(){
-		$(".sintaxe-post").fadeOut("slow");			
-	});
+    $('.abrir-get-json').click(function(){
+        $('.sintaxe-get-json').fadeToggle('slow');
+        return false;
+    });
 
+    $('.abrir-get-script').click(function(){
+        $('.sintaxe-get-script').fadeToggle('slow');
+    });
 
-	$(".abrir-get-json").click(function(){
-		$(".sintaxe-get-json").fadeIn("fast");	
-		return false;		
-	});
-	$(".fechar-get-json").click(function(){
-		$(".sintaxe-get-json").fadeOut("slow");			
-		return false;
-	});
-
-
-	$(".abrir-get-script").click(function(){
-		$(".sintaxe-get-script").fadeIn("fast");	
-		return false;		
-	});
-	$(".fechar-get-script").click(function(){
-		$(".sintaxe-get-script").fadeOut("slow");			
-		return false;
-	});
-	
-
-	$(".abrir-post-ajax").click(function(){
-		$(".sintaxe-post-ajax").fadeIn("fast");			
-	});
-	$(".fechar-post-ajax").click(function(){
-		$(".sintaxe-post-ajax").fadeOut("slow");			
-	});
+    $('.abrir-post-ajax').click(function(){
+        $('.sintaxe-post-ajax').fadeToggle('slow');
+    });
 
 });
 
