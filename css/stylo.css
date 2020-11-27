@@ -1,0 +1,37 @@
+
+.display-none{
+  display: none;
+}
+
+.display-block{
+   display: block;
+}
+
+.header-background{
+  background-color: #fed000;
+  padding:40px 20px 40px;
+  border-radius: 10px;
+}
+
+main{
+	background-color: #f7f7f7 !important;
+	border-radius: 5px;
+}
+
+.hr{ 
+	background-color: #fed000;
+	height: 3px;
+	margin: 40px 0px 30px 0px; 
+	border-radius: 5px;
+}
+
+body{
+	background-color: #333;
+}
+
+.dark-magenta{
+	background-color: #8B008B; 
+	width: 80%; 
+	height: 200px;  
+	margin: 10px;
+}
